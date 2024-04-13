@@ -32,8 +32,10 @@ about:
   home: http://thenceforward.net/perl/modules/IPC-System-Simple/
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
   license_file:
-    - {{ environ["PREFIX"] }}/man/man1/perlartistic.1
-    - {{ environ["PREFIX"] }}/man/man1/perlgpl.1
+    - {{ environ["PREFIX"] }}/man/man1/perlartistic.1 # [not win]
+    - {{ environ["PREFIX"] }}/man/man1/perlgpl.1      # [not win]
+    - {{ environ["PREFIX"] }}\man\man1\perlartistic.1 # [win]
+    - {{ environ["PREFIX"] }}\man\man1\perlgpl.1      # [win]
   summary: 'Run commands simply, with detailed diagnostics'
 
 extra:
